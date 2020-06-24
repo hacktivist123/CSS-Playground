@@ -4,18 +4,20 @@ import logo from '../assets/img/logo-white.png';
 
 const Nav = () => {
   return (
-    <div>
-      <Logo src={logo} alt="" srcset="" />
+    <LogoContainer>
+      <Logo src={logo} alt="logo" />
       <Hamburger></Hamburger>
-    </div>
+    </LogoContainer>
   );
 };
 
+const LogoContainer = styled.div`
+  position: absolute;
+  top: 40px;
+  left: 40px;
+`;
 const Logo = styled.img`
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 35px;
 `;
 
 const Hamburger = styled.div``;
