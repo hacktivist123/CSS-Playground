@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import Nav from './Nav';
 import backgroundImage from '../assets/img/hero.jpg';
 // import Button from '../components/Button';
@@ -42,16 +42,55 @@ const Heading = styled.h1`
   color: #ffff;
   text-transform: uppercase;
 `;
+
+//animation moveInLeft
+const moveInLeft = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+`;
+
 const HeadingMain = styled.span`
   display: block;
   font-size: 60px;
   font-weight: 400;
   letter-spacing: 35px;
+  animation: 2s ${moveInLeft};
+`;
+
+const moveInRight = keyframes`
+ 0% {
+   opacity: 0;
+   transform: translateX(100px);
+ }
+
+ 80% {
+    transform: translateX(-10px)
+  }
+ 
+ 100% {
+   opacity: 1;
+   transform: translate(0);
+ }
+
 `;
 const HeadingSub = styled.span`
   display: block;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation: 2s ${moveInRight};
 `;
+
 export default HeaderDiv;
