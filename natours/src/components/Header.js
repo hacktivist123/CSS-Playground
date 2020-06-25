@@ -1,8 +1,8 @@
 import React from 'react';
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Nav from './Nav';
 import backgroundImage from '../assets/img/hero.jpg';
-// import Button from '../components/Button';
+import Button from '../components/Button';
 
 const HeaderDiv = () => (
   <Header>
@@ -12,6 +12,7 @@ const HeaderDiv = () => (
         <HeadingMain>outdoors</HeadingMain>
         <HeadingSub>is where life happens</HeadingSub>
       </Heading>
+      <Button label="discover our tours" color="white" />
     </HeadingBox>
   </Header>
 );
@@ -41,13 +42,14 @@ const HeadingBox = styled.div`
 const Heading = styled.h1`
   color: #ffff;
   text-transform: uppercase;
+  backface-visibility: hidden;
 `;
 
 //animation moveInLeft
 const moveInLeft = keyframes`
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-100px) rotate(-180deg);
   }
 
   80% {
@@ -69,10 +71,11 @@ const HeadingMain = styled.span`
   animation: 2s ${moveInLeft};
 `;
 
+//animation moveInRight
 const moveInRight = keyframes`
  0% {
    opacity: 0;
-   transform: translateX(100px);
+   transform: translateX(100px) rotate(-180deg);
  }
 
  80% {

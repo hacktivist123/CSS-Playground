@@ -16,6 +16,7 @@ const LogoContainer = styled.div`
   top: 40px;
   left: 40px;
 `;
+
 const Logo = styled.img`
   height: 35px;
 `;

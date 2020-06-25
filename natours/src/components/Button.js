@@ -3,7 +3,11 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Button = (props) => (
-  <ButtonStyle className={props.className} onClick={props.handleClick}>
+  <ButtonStyle
+    className={props.className}
+    onClick={props.handleClick}
+    color={props.color}
+  >
     {props.icon} {props.label}
   </ButtonStyle>
 );
@@ -11,6 +15,7 @@ const Button = (props) => (
 Button.propTypes = {
   label: PropTypes.string,
   className: PropTypes.string,
+  color: PropTypes.string,
   icon: PropTypes.string,
   onClick: PropTypes.func,
 };
@@ -25,8 +30,9 @@ const ButtonStyle = styled.button`
   font-size: 1.6rem;
   border: none;
   cursor: pointer;
-  background-color: #55c57a;
-  color: #fff;
+  background-color: ${(props) =>
+    props.color === 'white' ? '#ffff' : '#55c57a'};
+  color: ${(props) => (props.color === 'white' ? '#7777' : '#ffff')};
   outline: none;
 `;
 
