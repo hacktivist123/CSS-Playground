@@ -13,11 +13,11 @@ const Button = (props) => (
 );
 
 Button.propTypes = {
-  label: PropTypes.string,
+  label: PropTypes.string.isRequired,
   className: PropTypes.string,
-  color: PropTypes.string,
+  color: PropTypes.string.isRequired,
   icon: PropTypes.string,
-  onClick: PropTypes.func,
+  handleClick: PropTypes.func,
 };
 
 const ButtonStyle = styled.button`
@@ -27,7 +27,8 @@ const ButtonStyle = styled.button`
   display: inline-block;
   border-radius: 10rem;
   position: relative;
-  font-size: 1.6rem;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
   border: none;
   cursor: pointer;
   background-color: ${(props) =>
