@@ -5,16 +5,23 @@ import backgroundImage from '../assets/img/hero.jpg';
 import Button from '../components/Button';
 
 const HeaderDiv = () => (
-  <Header>
-    <Nav />
-    <HeadingBox>
-      <Heading>
-        <HeadingMain>outdoors</HeadingMain>
-        <HeadingSub>is where life happens</HeadingSub>
-      </Heading>
-      <Button label="discover our tours" color="white" href="#" />
-    </HeadingBox>
-  </Header>
+  <main>
+    <Header>
+      <Nav />
+      <HeadingBox>
+        <Heading>
+          <HeadingMain>outdoors</HeadingMain>
+          <HeadingSub>is where life happens</HeadingSub>
+        </Heading>
+        <Button
+          label="discover our tours"
+          color="white"
+          href="#"
+          animated="true"
+        />
+      </HeadingBox>
+    </Header>
+  </main>
 );
 
 const Header = styled.header`
@@ -50,7 +57,7 @@ const Heading = styled.h1`
 const moveInLeft = keyframes`
   0% {
     opacity: 0;
-    transform: translateX(-100px) rotate(-180deg);
+    transform: translateX(-100px);
   }
 
   80% {
@@ -66,17 +73,17 @@ const moveInLeft = keyframes`
 
 const HeadingMain = styled.span`
   display: block;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 400;
   letter-spacing: 35px;
-  animation: 2s ${moveInLeft};
+  animation: 1s ${moveInLeft};
 `;
 
 //animation moveInRight
 const moveInRight = keyframes`
  0% {
    opacity: 0;
-   transform: translateX(100px) rotate(-180deg);
+   transform: translateX(100px);
  }
 
  80% {
@@ -91,10 +98,10 @@ const moveInRight = keyframes`
 `;
 const HeadingSub = styled.span`
   display: block;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 17.4px;
-  animation: 2s ${moveInRight};
+  animation: 1s ${moveInRight};
 `;
 
 export default HeaderDiv;
