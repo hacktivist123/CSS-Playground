@@ -12,7 +12,7 @@ const HeaderDiv = () => (
         <HeadingMain>outdoors</HeadingMain>
         <HeadingSub>is where life happens</HeadingSub>
       </Heading>
-      <Button label="discover our tours" color="white" />
+      <Button label="discover our tours" color="white" href="#" />
     </HeadingBox>
   </Header>
 );
@@ -43,6 +43,7 @@ const Heading = styled.h1`
   color: #ffff;
   text-transform: uppercase;
   backface-visibility: hidden;
+  margin-bottom: 60px;
 `;
 
 //animation moveInLeft
@@ -90,7 +91,7 @@ const moveInRight = keyframes`
 `;
 const HeadingSub = styled.span`
   display: block;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
   animation: 2s ${moveInRight};
