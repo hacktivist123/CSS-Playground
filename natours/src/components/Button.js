@@ -88,7 +88,7 @@ const ButtonStyle = styled.a`
     opacity: 0;
   }
   ${(props) =>
-    props.animated === 'true'
+    props.animated === true
       ? css`
           animation: 0.5s ${moveInBottom} ease-out 0.75s;
           animation-fill-mode: backwards;

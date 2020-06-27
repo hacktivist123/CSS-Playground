@@ -17,7 +17,7 @@ const HeaderDiv = () => (
           label="discover our tours"
           color="white"
           href="#"
-          animated="true"
+          animated={true}
         />
       </HeadingBox>
     </Header>
