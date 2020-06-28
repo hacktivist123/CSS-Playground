@@ -1,3 +1,3 @@
 # CSS-Playground
 
-This is off a css course but built with React instead.
+This is project is based on an Advanced CSS course but I built it with ReactJS and styled-components instead.
