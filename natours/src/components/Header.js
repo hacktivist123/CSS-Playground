@@ -7,6 +7,11 @@ import Button from '../components/Button';
 const HeaderDiv = () => (
   <main>
     <Header>
+      <img
+        src={backgroundImage}
+        alt="header background image"
+        style={{ display: 'none' }}
+      />
       <Nav />
       <HeadingBox>
         <Heading>
