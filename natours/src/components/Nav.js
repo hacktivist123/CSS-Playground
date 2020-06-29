@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../assets/img/logo-white.png';
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <LogoContainer>
       <Logo src={logo} alt="logo" />
-      <Hamburger></Hamburger>
+      <HamburgerContainer onClick={props.onClick}></HamburgerContainer>
     </LogoContainer>
   );
 };
@@ -21,6 +21,6 @@ const Logo = styled.img`
   height: 35px;
 `;
 
-const Hamburger = styled.div``;
+const HamburgerContainer = styled.div``;
 
 export default Nav;
