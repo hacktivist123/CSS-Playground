@@ -3,7 +3,7 @@ import styled, { keyframes, css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Button = (props) => (
-  <ButtonStyle
+  <ButtonContainer
     className={props.className}
     onClick={props.handleClick}
     color={props.color}
@@ -11,7 +11,7 @@ const Button = (props) => (
     animated={props.animated}
   >
     {props.icon} {props.label}
-  </ButtonStyle>
+  </ButtonContainer>
 );
 
 Button.propTypes = {
@@ -39,7 +39,7 @@ const moveInBottom = keyframes`
 
 `;
 
-const ButtonStyle = styled.a`
+const ButtonContainer = styled.a`
   :link,
   :visited {
     position: relative;
