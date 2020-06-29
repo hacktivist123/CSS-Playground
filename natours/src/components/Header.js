@@ -1,15 +1,15 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import Nav from './Nav';
-import backgroundImage from '../assets/img/hero.jpg';
-import Button from '../components/Button';
+import React from 'react'
+import styled, { keyframes } from 'styled-components'
+import Nav from './Nav'
+import backgroundImage from '../assets/img/hero.jpg'
+import Button from '../components/Button'
 
 const HeaderDiv = () => (
   <main>
     <Header>
       <img
         src={backgroundImage}
-        alt="header background image"
+        alt='header background image'
         style={{ display: 'none' }}
       />
       <Nav />
@@ -18,16 +18,11 @@ const HeaderDiv = () => (
           <HeadingMain>outdoors</HeadingMain>
           <HeadingSub>is where life happens</HeadingSub>
         </Heading>
-        <Button
-          label="discover our tours"
-          color="white"
-          href="#"
-          animated={true}
-        />
+        <Button label='discover our tours' color='white' href='#' animated />
       </HeadingBox>
     </Header>
   </main>
-);
+)
 
 const Header = styled.header`
   position: relative;
@@ -41,7 +36,7 @@ const Header = styled.header`
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-`;
+`
 
 const HeadingBox = styled.div`
   position: absolute;
@@ -49,16 +44,16 @@ const HeadingBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-`;
+`
 
 const Heading = styled.h1`
   color: #ffff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 60px;
-`;
+`
 
-//animation moveInLeft
+// animation moveInLeft
 const moveInLeft = keyframes`
   0% {
     opacity: 0;
@@ -74,7 +69,7 @@ const moveInLeft = keyframes`
     transform: translate(0);
   }
 
-`;
+`
 
 const HeadingMain = styled.span`
   display: block;
@@ -82,9 +77,9 @@ const HeadingMain = styled.span`
   font-weight: 400;
   letter-spacing: 35px;
   animation: 1s ${moveInLeft};
-`;
+`
 
-//animation moveInRight
+// animation moveInRight
 const moveInRight = keyframes`
  0% {
    opacity: 0;
@@ -100,13 +95,13 @@ const moveInRight = keyframes`
    transform: translate(0);
  }
 
-`;
+`
 const HeadingSub = styled.span`
   display: block;
   font-size: 25px;
   font-weight: 700;
   letter-spacing: 17.4px;
   animation: 1s ${moveInRight};
-`;
+`
 
-export default HeaderDiv;
+export default HeaderDiv

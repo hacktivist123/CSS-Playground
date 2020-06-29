@@ -1,6 +1,6 @@
-import React from 'react';
-import styled, { keyframes, css } from 'styled-components';
-import PropTypes from 'prop-types';
+import React from 'react'
+import styled, { keyframes, css } from 'styled-components'
+import PropTypes from 'prop-types'
 
 const Button = (props) => (
   <ButtonContainer
@@ -12,19 +12,19 @@ const Button = (props) => (
   >
     {props.icon} {props.label}
   </ButtonContainer>
-);
+)
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   className: PropTypes.string,
   color: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
-  animated: PropTypes.string.isRequired,
+  animated: PropTypes.bool.isRequired,
   icon: PropTypes.string,
-  handleClick: PropTypes.func,
-};
+  handleClick: PropTypes.func
+}
 
-//animation moveInBottom
+// animation moveInBottom
 const moveInBottom = keyframes`
  0% {
    opacity: 0;
@@ -37,7 +37,7 @@ const moveInBottom = keyframes`
    transform: translate(0);
  }
 
-`;
+`
 
 const ButtonContainer = styled.a`
   :link,
@@ -96,6 +96,6 @@ const ButtonContainer = styled.a`
       : css`
           animation: none;
         `};
-`;
+`
 
-export default Button;
+export default Button
