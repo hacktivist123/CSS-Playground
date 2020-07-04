@@ -21,23 +21,8 @@ Button.propTypes = {
   href: PropTypes.string.isRequired,
   animated: PropTypes.bool.isRequired,
   icon: PropTypes.string,
-  handleClick: PropTypes.func
+  handleClick: PropTypes.func,
 }
-
-// animation moveInBottom
-const moveInBottom = keyframes`
- 0% {
-   opacity: 0;
-   transform: translateY(40px);
- }
-
- 
- 100% {
-   opacity: 1;
-   transform: translate(0);
- }
-
-`
 
 const ButtonContainer = styled.a`
   :link,
@@ -90,12 +75,25 @@ const ButtonContainer = styled.a`
   ${(props) =>
     props.animated === true
       ? css`
-          animation: 0.5s ${moveInBottom} ease-out 0.75s;
+          animation: 0.5s moveInBottom ease-out 0.75s;
           animation-fill-mode: backwards;
         `
       : css`
           animation: none;
         `};
+
+  /* animation moveInBottom */
+  @keyframes moveInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
 `
 
 export default Button
