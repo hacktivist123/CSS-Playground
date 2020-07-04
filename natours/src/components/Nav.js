@@ -1,11 +1,17 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import React from 'react'
 import styled from 'styled-components'
+/* -------------------------------------------------------------------------- */
+/*                            Internal Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import logo from '../assets/img/logo-white.png'
 
 const Nav = (props) => {
   return (
     <LogoContainer>
-      <Logo src={logo} alt='logo' />
+      <Logo src={logo} alt="logo" />
       <HamburgerContainer onClick={props.onClick} />
     </LogoContainer>
   )

@@ -1,5 +1,12 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import React from 'react'
 import styled from 'styled-components'
+
+/* -------------------------------------------------------------------------- */
+/*                            Internal Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import Nav from './Nav'
 import backgroundImage from '../assets/img/hero.jpg'
 import Button from '../components/Button'
@@ -9,16 +16,16 @@ const HeaderDiv = () => (
     <Header>
       <img
         src={backgroundImage}
-        alt='header background'
+        alt="header background"
         style={{ display: 'none' }}
       />
       <Nav />
-      <div className='heading-container'>
-        <div className='heading'>
-          <div className='main-heading'>outdoors</div>
-          <div className='sub-heading'>is where life happens</div>
+      <div className="heading-container">
+        <div className="heading">
+          <div className="main-heading">outdoors</div>
+          <div className="sub-heading">is where life happens</div>
         </div>
-        <Button label='discover our tours' color='white' href='#' animated />
+        <Button label="discover our tours" color="white" href="#" animated />
       </div>
     </Header>
   </main>

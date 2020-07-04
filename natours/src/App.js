@@ -1,10 +1,16 @@
+/* -------------------------------------------------------------------------- */
+/*                            External Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import React from 'react'
+/* -------------------------------------------------------------------------- */
+/*                            Internal Dependencies                           */
+/* -------------------------------------------------------------------------- */
 import Header from './components/Header'
 import './styles/App.css'
 
-function App () {
+function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
     </div>
   )
